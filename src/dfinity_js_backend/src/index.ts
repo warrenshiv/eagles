@@ -397,4 +397,155 @@ export default Canister({
 
     return Ok(chats);
   }),
+
+  // Update Patient Profile
+  updatePatient: update(
+    [text, CreatePatientPayload],
+    Result(Patient, Message),
+    (patientId, payload) => {
+      const patientOpt = Patients.get(patientId);
+
+      if ("None" in patientOpt) {
+        return Err({ NotFound: `Patient with id=${patientId} not found` });
+      }
+
+      const updatedPatient = {
+        ...patientOpt.Some,
+        ...payload,
+      };
+      Patients.insert(patientId, updatedPatient);
+      return Ok(updatedPatient);
+    }
+  ),
+
+  // Delete Patient Profile
+  deletePatient: update([text], Result(Message, Message), (patientId) => {
+    const patientOpt = Patients.get(patientId);
+
+    if ("None" in patientOpt) {
+      return Err({ NotFound: `Patient with id=${patientId} not found` });
+    }
+
+    Patients.remove(patientId);
+    return Ok({ Success: `Patient with id=${patientId} deleted successfully` });
+  }),
+
+  // Consultation History for a Patient
+  getConsultationHistoryByPatient: query(
+    [text],
+    Result(Vec(Consultation), Message),
+    (patientId) => {
+      const consultations = Consultations.values().filter(
+        (consultation) => consultation.patient_id === patientId
+      );
+
+      if (consultations.length === 0) {
+        return Err({
+          NotFound: `No consultations found for patient id=${patientId}`,
+        });
+      }
+
+      return Ok(consultations);
+    }
+  ),
+
+  // Update Doctor Availability
+  updateDoctorAvailability: update(
+    [text, bool],
+    Result(Doctor, Message),
+    (doctorId, availability) => {
+      const doctorOpt = Doctors.get(doctorId);
+
+      if ("None" in doctorOpt) {
+        return Err({ NotFound: `Doctor with id=${doctorId} not found` });
+      }
+
+      const updatedDoctor = {
+        ...doctorOpt.Some,
+        available: availability,
+      };
+      Doctors.insert(doctorId, updatedDoctor);
+      return Ok(updatedDoctor);
+    }
+  ),
+
+  // Search Doctor by Name
+  searchDoctorByName: query([text], Result(Vec(Doctor), Message), (name) => {
+    const matchingDoctors = Doctors.values().filter((doctor) =>
+      doctor.name.toLowerCase().includes(name.toLowerCase())
+    );
+
+    if (matchingDoctors.length === 0) {
+      return Err({
+        NotFound: `No doctors found with name containing '${name}'`,
+      });
+    }
+
+    return Ok(matchingDoctors);
+  }),
+
+  // Search Department by Name
+  searchDepartmentByName: query(
+    [text],
+    Result(Vec(Department), Message),
+    (name) => {
+      const matchingDepartments = Departments.values().filter((department) =>
+        department.name.toLowerCase().includes(name.toLowerCase())
+      );
+
+      if (matchingDepartments.length === 0) {
+        return Err({
+          NotFound: `No departments found with name containing '${name}'`,
+        });
+      }
+
+      return Ok(matchingDepartments);
+    }
+  ),
+
+  // Update Doctor Profile
+  updateDoctor: update(
+    [text, CreateDoctorPayload],
+    Result(Doctor, Message),
+    (doctorId, payload) => {
+      const doctorOpt = Doctors.get(doctorId);
+
+      if ("None" in doctorOpt) {
+        return Err({ NotFound: `Doctor with id=${doctorId} not found` });
+      }
+
+      const updatedDoctor = {
+        ...doctorOpt.Some,
+        ...payload,
+      };
+      Doctors.insert(doctorId, updatedDoctor);
+      return Ok(updatedDoctor);
+    }
+  ),
+
+  // Delete Doctor Profile
+  deleteDoctor: update([text], Result(Message, Message), (doctorId) => {
+    const doctorOpt = Doctors.get(doctorId);
+
+    if ("None" in doctorOpt) {
+      return Err({ NotFound: `Doctor with id=${doctorId} not found` });
+    }
+
+    Doctors.remove(doctorId);
+    return Ok({ Success: `Doctor with id=${doctorId} deleted successfully` });
+  }),
+
+  // Delete Department
+  deleteDepartment: update([text], Result(Message, Message), (departmentId) => {
+    const departmentOpt = Departments.get(departmentId);
+
+    if ("None" in departmentOpt) {
+      return Err({ NotFound: `Department with id=${departmentId} not found` });
+    }
+
+    Departments.remove(departmentId);
+    return Ok({
+      Success: `Department with id=${departmentId} deleted successfully`,
+    });
+  }),
 });
