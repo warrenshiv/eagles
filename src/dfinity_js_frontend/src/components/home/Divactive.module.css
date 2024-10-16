@@ -1,0 +1,85 @@
+.frameIcon {
+  position: absolute;
+  top: 25.2px;
+  left: 28.8px;
+  width: 67.5px;
+  height: 72px;
+}
+.iCameTo,
+.storylineInMy {
+  position: absolute;
+  left: 28.8px;
+  letter-spacing: -0.63px;
+  line-height: 30.6px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  height: 30.6px;
+}
+.iCameTo {
+  top: 105.3px;
+  font-size: var(--font-size-5xl-3);
+  width: 254.7px;
+}
+.storylineInMy {
+  top: 137.7px;
+  width: 243.2px;
+}
+.wasHoldingMe {
+  top: 170.1px;
+  letter-spacing: -0.63px;
+  line-height: 33px;
+  width: 231px;
+  height: 33px;
+}
+.onWhatHe,
+.peterBelgium,
+.wasHoldingMe {
+  position: absolute;
+  left: 28.8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.peterBelgium {
+  top: 320.4px;
+  font-size: var(--font-size-xs-7);
+  letter-spacing: -0.13px;
+  line-height: 16.2px;
+  color: var(--color-dimgray-100);
+  width: 81.5px;
+  height: 15.3px;
+  min-width: 81.5px;
+}
+.onWhatHe {
+  top: 344.7px;
+  font-size: var(--font-size-3xs-9);
+  letter-spacing: -0.11px;
+  line-height: 12.6px;
+  width: 214.9px;
+  height: 12.6px;
+}
+.divactive {
+  position: absolute;
+  top: 274.9px;
+  left: 471.6px;
+  border-radius: var(--br-2xs-8);
+  background-color: var(--color-whitesmoke-300);
+  width: 336.6px;
+  height: 383.4px;
+  text-align: left;
+  font-size: var(--font-size-4xl-4);
+  color: var(--color-darkslategray-200);
+  font-family: var(--text);
+}
+@media screen and (max-width: 450px) {
+  .iCameTo,
+  .storylineInMy,
+  .wasHoldingMe {
+    font-size: var(--font-size-lgi);
+    line-height: 24px;
+  }
+  .wasHoldingMe {
+    line-height: 26px;
+  }
+}

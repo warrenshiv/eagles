@@ -1,0 +1,536 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[type="text"],
+input:where(:not([type])),
+[type="email"],
+[type="url"],
+[type="password"],
+[type="number"],
+[type="date"],
+[type="datetime-local"],
+[type="month"],
+[type="search"],
+[type="tel"],
+[type="time"],
+[type="week"],
+[multiple],
+textarea,
+select {
+  appearance: none;
+  background-color: transparent;
+  border-color: unset;
+  border-width: 0;
+  border-radius: unset;
+  padding: unset;
+  font-size: unset;
+  line-height: unset;
+}
+
+/* Override default focus colors for tailwindcss-forms https://github.com/tailwindlabs/tailwindcss-forms */
+[type="text"]:focus,
+[type="email"]:focus,
+[type="url"]:focus,
+[type="password"]:focus,
+[type="number"]:focus,
+[type="date"]:focus,
+[type="search"]:focus,
+[type="checkbox"]:focus,
+[type="radio"]:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  --tw-ring-color: "#00bdd6";
+  border-color: "#00bdd6";
+}
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,500;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-assistant: Assistant;
+  --text-xs-medium: "Plus Jakarta Sans";
+  --disclaimer-regular: Roboto;
+  --font-poppins: Poppins;
+  --text: Inter;
+  --font-manrope: Manrope;
+  --type-disclaimer: Montserrat;
+  --font-podkova: Podkova;
+  --font-work-sans: "Work Sans";
+
+  /* font sizes */
+  --body-medium-size: 14px;
+  --h1-size: 48px;
+  --font-size-19xl: 38px;
+  --font-size-10xl: 29px;
+  --font-size-sm-9: 13.9px;
+  --text-size: 16px;
+  --font-size-20xl: 39px;
+  --font-size-12xl: 31px;
+  --font-size-4xl: 23px;
+  --font-size-6xl-2: 25.2px;
+  --text-xl-semibold-size: 20px;
+  --font-size-5xl-5: 24.5px;
+  --font-size-8xl: 27px;
+  --headings-h4-size: 22px;
+  --font-size-25xl-8: 44.8px;
+  --font-size-17xl: 36px;
+  --h3-size: 24px;
+  --font-size-lgi: 19px;
+  --font-size-45xl: 64px;
+  --font-size-32xl: 51px;
+  --text-lg-semibold-size: 18px;
+  --font-size-xl-4: 20.4px;
+  --font-size-40xl: 59px;
+  --font-size-28xl: 47px;
+  --font-size-16xl: 35px;
+  --font-size-3xs-9: 9.9px;
+  --font-size-xs-7: 11.7px;
+  --font-size-3xl-5: 22.5px;
+  --font-size-4xl-4: 23.4px;
+  --font-size-5xl-3: 24.3px;
+  --font-size-31xl: 50px;
+  --font-size-21xl: 40px;
+  --display-sm-semibold-size: 30px;
+  --text-xs-medium-size: 12px;
+  --font-size-7xl: 26px;
+  --font-size-2xl: 21px;
+  --font-size-lgi-9: 19.9px;
+  --font-size-mini-4: 14.4px;
+  --font-size-2xs-8: 10.8px;
+  --font-size-8xl-2: 27.2px;
+  --font-size-mini-5: 14.5px;
+  --font-size-2xs: 11px;
+  --font-size-13xl: 32px;
+  --special-headings-display-3-size: 44px;
+  --font-size-xs-3: 11.3px;
+
+  /* Colors */
+  --white: #fff;
+  --grey-4: #fbfcfd;
+  --color-gray-100: #898989;
+  --slate-800: #1e293b;
+  --gray-800: #1f2937;
+  --gray-8001: #1d2939;
+  --neutral-colors-black: #1e1c39;
+  --color-gray-200: #002147;
+  --gray-900: #101828;
+  --slate-900: #0f172a;
+  --dark: #09142f;
+  --color-gray-300: #0a0a0a;
+  --color-gray-400: rgba(15, 23, 42, 0.5);
+  --color-gray-500: rgba(137, 137, 137, 0.26);
+  --color-gray-600: rgba(148, 148, 148, 0.18);
+  --color-gray-700: rgba(123, 123, 123, 0.18);
+  --color-gray-800: rgba(255, 255, 255, 0.3);
+  --color-gray-900: rgba(255, 255, 255, 0.2);
+  --color-gray-1000: rgba(255, 255, 255, 0.7);
+  --slate-50: #f8fafc;
+  --color-whitesmoke-100: #f7f7f7;
+  --color-whitesmoke-200: #f2f5f6;
+  --gray-100: #f2f4f7;
+  --color-whitesmoke-300: #f5f2ed;
+  --color-whitesmoke-400: #f2f2f2;
+  --color-whitesmoke-500: #f1f1f1;
+  --color-whitesmoke-600: #ededed;
+  --gray-200: #eaecf0;
+  --color-plum: #c2aafa;
+  --color-gainsboro-100: #e4e7ed;
+  --color-gainsboro-200: #e6e6e6;
+  --color-gainsboro-300: #dee0e3;
+  --color-gainsboro-400: #d9dbe0;
+  --color-gainsboro-500: rgba(230, 230, 230, 0.09);
+  --color-bisque: #ffe0cc;
+  --color-chocolate: #b74d1a;
+  --color-saddlebrown: #803218;
+  --color-mistyrose: #ffdce8;
+  --color-palevioletred-100: #a54b7a;
+  --color-palevioletred-200: #763359;
+  --color-honeydew: #d6edd9;
+  --color-seagreen-100: #1f7a57;
+  --success-700: #037a48;
+  --green-800: #166534;
+  --slate-600: #475569;
+  --gray-600: #475467;
+  --color-darkslategray-100: #4b4c4d;
+  --gray-700: #344154;
+  --color-darkslategray-200: #413d45;
+  --color-darkslategray-300: #195642;
+  --black: #263238;
+  --black-fonts-headings: #2d2e2e;
+  --color-darkslategray-400: #043a53;
+  --color-darkslategray-500: #003153;
+  --color-darkslategray-600: rgba(66, 74, 94, 0.5);
+  --color-darkslategray-700: rgba(38, 50, 56, 0.75);
+  --color-mediumseagreen-100: #5fd58c;
+  --success-500: #12b76a;
+  --color-mediumaquamarine-100: #8fe2af;
+  --color-mediumaquamarine-200: #85e0a3;
+  --color-dimgray-100: #67646a;
+  --color-dimgray-200: #565656;
+  --base-black: #000;
+  --slate-500: #64748b;
+  --gray-500: #667085;
+  --neutral-colors-text-gray: #615e83;
+  --color-slategray-100: #386e87;
+  --slate-100: #f1f5f9;
+  --grey-3: #f0f4fa;
+  --slate-200: #e2e8f0;
+  --lime-100: #ecfccb;
+  --lime-50: #f7fee7;
+  --color-beige-100: #dee6cf;
+  --lime-300: #bef264;
+  --lime-400: #a3e635;
+  --lime-500: #84cc16;
+  --color-yellowgreen-100: #80c816;
+  --lime-600: #65a30d;
+  --color-yellowgreen-200: rgba(132, 204, 22, 0.1);
+  --color-yellowgreen-300: rgba(132, 204, 22, 0.2);
+  --color-olivedrab-100: #6dae43;
+  --color-olivedrab-200: #689f38;
+  --lime-700: #4d7c0f;
+  --color-olivedrab-300: rgba(77, 124, 15, 0.18);
+  --gray-300: #d0d5dd;
+  --slate-300: #cbd5e1;
+  --color-lightgray-100: #c9cfd6;
+  --slate-4001: #94a3b8;
+  --grey-0: #7f97bd;
+  --neutral-colors-400: #9291a5;
+  --lime-200: #d9f99d;
+  --color-khaki-100: #bfe085;
+  --primary-600: #7e56d9;
+  --primary-50: #f9f5ff;
+  --neutral-colors-300: #f7f7fb;
+  --primary-700: #6941c6;
+  --color-green: #529900;
+  --gray-400: #9ca3af;
+  --pink-200: #fbcfe8;
+  --system-colors-magenta-200: #e0c6fd;
+  --pink-501: #fdf2fa;
+  --pink-50: #fdf2f8;
+  --orange-700: #b93815;
+  --color-firebrick-100: #c5192e;
+  --error-700: #b42318;
+  --lime-800: #3f6212;
+  --slate-400: #002251;
+  --alert-1: #e57373;
+  --color-silver: #bababa;
+  --system-colors-blue-200: #c6d2fd;
+  --grey-1: #bcc8dc;
+  --primary-2: #155dc0;
+  --primary-4: #002978;
+  --primary-0: #1e7ee5;
+  --grey-11: #4c6c9f;
+  --system-colors-magenta-400: #962dff;
+  --color-blueviolet-100: #9333ea;
+  --primary-colors-purple: #4a3aff;
+  --neutral-colors-500: #e5e5ef;
+  --color-purple: rgba(102, 15, 124, 0.18);
+  --color-darkmagenta: rgba(140, 54, 163, 0.18);
+  --orange-dark-50: #fff4ed;
+  --pink-700: #c11574;
+  --color-forestgreen: #4b9f38;
+  --color-goldenrod: #dda83a;
+  --purple-500: #a855f7;
+  --color-darkorchid-100: #8f3bde;
+
+  /* Gaps */
+  --gap-20xl: 39px;
+  --gap-61xl: 80px;
+  --gap-21xl: 40px;
+  --gap-xl: 20px;
+  --gap-5xl: 24px;
+  --gap-31xl: 50px;
+  --gap-6xl: 25px;
+  --gap-7xl: 26px;
+  --gap-base: 16px;
+  --gap-7xs: 6px;
+  --gap-60xl: 79px;
+  --gap-36xl: 55px;
+  --gap-8xl: 27px;
+  --gap-lg-7: 18.7px;
+  --gap-5xl-5: 24.5px;
+  --gap-34xl: 53px;
+  --gap-47xl: 66px;
+  --gap-14xl: 33px;
+  --gap-3xl: 22px;
+  --gap-71xl: 90px;
+  --gap-26xl: 45px;
+  --gap-269xl: 288px;
+  --gap-125xl: 144px;
+  --gap-53xl: 72px;
+  --gap-17xl: 36px;
+  --gap-4xl: 23px;
+  --gap-19xl: 38px;
+  --gap-13xl: 32px;
+  --gap-25xl: 44px;
+  --gap-lg: 18px;
+  --gap-109xl: 128px;
+  --gap-45xl: 64px;
+  --gap-xs: 12px;
+  --gap-5xs: 8px;
+  --gap-6xs: 7px;
+  --gap-9xs-8: 3.8px;
+  --gap-11xs-9: 1.9px;
+  --gap-10xs-1: 2.1px;
+  --gap-9xs: 4px;
+  --gap-2xl: 21px;
+  --gap-11xs-8: 1.8px;
+  --gap-7xs-3: 5.3px;
+  --gap-2xs: 11px;
+  --gap-3xs: 10px;
+  --gap-sm: 14px;
+  --gap-mini: 15px;
+  --gap-3xl-8: 22.8px;
+  --gap-xs-4: 11.4px;
+  --gap-29xl-7: 48.7px;
+  --gap-9xs-5: 3.5px;
+  --gap-10xs-4: 2.4px;
+  --gap-2xl-8: 21.8px;
+  --gap-106xl-5: 125.5px;
+  --gap-29xl: 48px;
+  --gap-11xs: 2px;
+  --gap-12xs: 1px;
+  --gap-86xl: 105px;
+  --gap-33xl: 52px;
+  --gap-5xs-5: 7.5px;
+  --gap-139xl: 158px;
+  --gap-mid: 17px;
+  --gap-45xl-3: 64.3px;
+  --gap-base-7: 15.7px;
+  --gap-10xs: 3px;
+  --gap-4xl-5: 23.5px;
+  --gap-50xl: 69px;
+  --gap-15xl: 34px;
+  --gap-6xl-9: 25.9px;
+  --gap-base-6: 15.6px;
+  --gap-4xl-4: 23.4px;
+  --gap-3xl-4: 22.4px;
+  --gap-4xs-1: 8.1px;
+  --gap-90xl: 109px;
+  --gap-35xl: 54px;
+  --gap-smi-4: 12.4px;
+  --gap-mid-9: 17.9px;
+  --gap-6xs-4: 6.4px;
+  --gap-7xs-1: 5.1px;
+  --gap-9xl: 28px;
+  --gap-4xs: 9px;
+
+  /* Paddings */
+  --padding-81xl: 100px;
+  --padding-xl: 20px;
+  --padding-46xl: 65px;
+  --padding-57xl: 76px;
+  --padding-53xl: 72px;
+  --padding-17xl: 36px;
+  --padding-19xl: 38px;
+  --padding-29xl: 48px;
+  --padding-10xs: 3px;
+  --padding-15xl: 34px;
+  --padding-3xs: 10px;
+  --padding-9xl: 28px;
+  --padding-44xl: 63px;
+  --padding-60xl: 79px;
+  --padding-22xl: 41px;
+  --padding-32xl: 51px;
+  --padding-2xs: 11px;
+  --padding-smi: 13px;
+  --padding-mini: 15px;
+  --padding-11xs: 2px;
+  --padding-12xs: 1px;
+  --padding-28xl-3: 47.3px;
+  --padding-27xl: 46px;
+  --padding-12xl: 31px;
+  --padding-11xl: 30px;
+  --padding-2xl: 21px;
+  --padding-37xl: 56px;
+  --padding-198xl: 217px;
+  --padding-132xl: 151px;
+  --padding-89xl: 108px;
+  --padding-35xl: 54px;
+  --padding-79xl: 98px;
+  --padding-sm: 14px;
+  --padding-10xl: 29px;
+  --padding-8xl: 27px;
+  --padding-14xl: 33px;
+  --padding-xs: 12px;
+  --padding-69xl: 88px;
+  --padding-51xl: 70px;
+  --padding-26xl: 45px;
+  --padding-45xl: 64px;
+  --padding-61xl: 80px;
+  --padding-23xl: 42px;
+  --padding-21xl: 40px;
+  --padding-13xl: 32px;
+  --padding-59xl: 78px;
+  --padding-5xs: 8px;
+  --padding-7xs: 6px;
+  --padding-74xl: 93px;
+  --padding-4xs: 9px;
+  --padding-103xl: 122px;
+  --padding-8xs: 5px;
+  --padding-3xl: 22px;
+  --padding-43xl: 62px;
+  --padding-base: 16px;
+  --padding-367xl: 386px;
+  --padding-232xl: 251px;
+  --padding-11xs-9: 1.9px;
+  --padding-6xs: 7px;
+  --padding-9xs: 4px;
+  --padding-sm-3: 13.3px;
+  --padding-sm-2: 13.2px;
+  --padding-11xs-1: 1.1px;
+  --padding-2xs-4: 10.4px;
+  --padding-10xs-6: 2.6px;
+  --padding-9xs-2: 3.2px;
+  --padding-lg: 18px;
+  --padding-5xs-6: 7.6px;
+  --padding-2xs-7: 10.7px;
+  --padding-10xs-7: 2.7px;
+  --padding-lgi: 19px;
+  --padding-mid: 17px;
+  --padding-171xl: 190px;
+  --padding-104xl: 123px;
+  --padding-5xl: 24px;
+  --padding-93xl: 112px;
+  --padding-12xs-1: 0.1px;
+  --padding-55xl-5: 74.5px;
+  --padding-12xs-6: 0.6px;
+  --padding-6xl-1: 25.1px;
+  --padding-191xl: 210px;
+  --padding-106xl: 125px;
+  --padding-173xl: 192px;
+  --padding-164xl: 183px;
+  --padding-72xl: 91px;
+  --padding-20xl: 39px;
+  --padding-101xl: 120px;
+  --padding-214xl: 233px;
+  --padding-571xl: 590px;
+  --padding-276xl: 295px;
+  --padding-77xl: 96px;
+  --padding-200xl: 219px;
+  --padding-915xl: 934px;
+  --padding-588xl: 607px;
+  --padding-376xl: 395px;
+  --padding-4xs-5: 8.5px;
+  --padding-9xs-5: 3.5px;
+  --padding-9xs-6: 3.6px;
+  --padding-25xl: 44px;
+  --padding-4xl: 23px;
+  --padding-63xl: 82px;
+  --padding-34xl: 53px;
+  --padding-54xl: 73px;
+  --padding-610xl: 629px;
+  --padding-390xl: 409px;
+  --padding-247xl: 266px;
+  --padding-30xl: 49px;
+  --padding-7xl: 26px;
+  --padding-2xl-2: 21.2px;
+  --padding-base-5: 16.5px;
+  --padding-10xs-5: 2.5px;
+  --padding-24xl: 43px;
+  --padding-41xl: 60px;
+  --padding-76xl: 95px;
+  --padding-83xl: 102px;
+  --padding-78xl: 97px;
+  --padding-11xs-5: 1.5px;
+  --padding-337xl: 356px;
+  --padding-159xl: 178px;
+  --padding-11xl-6: 30.6px;
+  --padding-14xl-4: 33.4px;
+  --padding-10xs-9: 2.9px;
+  --padding-449xl: 468px;
+  --padding-285xl: 304px;
+  --padding-179xl: 198px;
+  --padding-36xl: 55px;
+  --padding-553xl-9: 572.9px;
+  --padding-353xl: 372px;
+  --padding-223xl: 242px;
+  --padding-9xs-3: 3.3px;
+  --padding-6xs-8: 6.8px;
+  --padding-5xs-5: 7.5px;
+  --padding-9xs-8: 3.8px;
+  --padding-7xs-2: 5.2px;
+  --padding-7xs-5: 5.5px;
+  --padding-329xl: 348px;
+  --padding-155xl: 174px;
+  --padding-333xl: 352px;
+  --padding-157xl: 176px;
+  --padding-369xl: 388px;
+  --padding-175xl: 194px;
+  --padding-362xl: 381px;
+  --padding-361xl: 380px;
+  --padding-31xl: 50px;
+
+  /* Border radiuses */
+  --br-xl: 20px;
+  --br-24xl: 43px;
+  --br-6xs: 7px;
+  --br-sm: 14px;
+  --br-3xs: 10px;
+  --br-81xl: 100px;
+  --br-8xs: 5px;
+  --br-112xl: 131px;
+  --br-2xs-8: 10.8px;
+  --br-xs: 12px;
+  --br-mini: 15px;
+  --br-3xl: 22px;
+  --br-base: 16px;
+  --br-7xs: 6px;
+  --br-41xl: 60px;
+  --br-9xs: 4px;
+  --br-5xs: 8px;
+  --br-base-1: 15.1px;
+  --br-5xs-8: 7.8px;
+  --br-19xl: 38px;
+  --br-46xl: 65px;
+  --br-4xs-5: 8.5px;
+  --br-34xl: 53px;
+  --br-181xl: 200px;
+  --br-15xl: 34px;
+  --br-247xl-7: 266.7px;
+  --br-7xl-3: 26.3px;
+  --br-xl-8: 20.8px;
+  --br-7xl: 26px;
+  --br-2xl-3: 21.3px;
+  --br-31xl: 50px;
+  --br-30xl: 49px;
+  --br-11xs: 2px;
+  --br-xs-4: 11.4px;
+  --br-7xs-7: 5.7px;
+  --br-8xl-2: 27.2px;
+  --br-7xs-4: 5.4px;
+  --br-9xl: 28px;
+  --br-5xl: 24px;
+  --br-94xl: 113px;
+  --br-6xl: 25px;
+  --br-45xl: 64px;
+  --br-10xs: 3px;
+  --br-75xl: 94px;
+
+  /* Effects */
+  --shadow-sm: 0px 1px 3px rgba(16, 24, 40, 0.1),
+    0px 1px 2px rgba(16, 24, 40, 0.06);
+  --background-blur-md: blur(16px);
+  --elevation-02: 0px 0px 1px rgba(0, 41, 120, 0.05),
+    0px 2px 4px rgba(30, 126, 229, 0.1);
+  --general-shadows-shadow-01: 0px 2px 6px rgba(13, 10, 44, 0.08);
+  --table-row: 0px -1px 0px #d5dae5;
+  --background-blur-sm: blur(8px);
+  --shadow-xs: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}

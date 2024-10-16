@@ -1,0 +1,86 @@
+.yourAppBrings {
+  position: absolute;
+  top: 105.3px;
+  left: 28.8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  width: 266.2px;
+}
+.ourHome,
+.peaceAndTolerance,
+.yourAppBrings {
+  letter-spacing: -0.63px;
+  line-height: 30.6px;
+  height: 30.6px;
+}
+.peaceAndTolerance {
+  position: absolute;
+  top: 137.7px;
+  left: 28.8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  width: 252.2px;
+}
+.ourHome {
+  top: 170.1px;
+  width: 111.5px;
+  min-width: 111.5px;
+}
+.onMeditationsPositive,
+.ourHome,
+.rachaelUk {
+  position: absolute;
+  left: 28.8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.rachaelUk {
+  top: 320.4px;
+  font-size: var(--font-size-xs-7);
+  letter-spacing: -0.13px;
+  line-height: 17px;
+  color: var(--color-dimgray-100);
+  width: 67px;
+  height: 17px;
+  min-width: 67px;
+}
+.onMeditationsPositive {
+  top: 344.7px;
+  font-size: var(--font-size-3xs-9);
+  letter-spacing: -0.11px;
+  line-height: 12.6px;
+  width: 210.1px;
+  height: 12.6px;
+}
+.frameIcon {
+  position: absolute;
+  top: 25.2px;
+  left: calc(50% - 139.5px);
+  width: 67.5px;
+  height: 72px;
+}
+.divsibling {
+  position: absolute;
+  top: 260.5px;
+  left: 113.4px;
+  border-radius: var(--br-2xs-8);
+  background-color: var(--color-whitesmoke-300);
+  width: 336.6px;
+  height: 383.4px;
+  opacity: 0.4;
+  text-align: left;
+  font-size: var(--font-size-4xl-4);
+  color: var(--color-darkslategray-200);
+  font-family: var(--text);
+}
+@media screen and (max-width: 450px) {
+  .ourHome,
+  .peaceAndTolerance,
+  .yourAppBrings {
+    font-size: var(--font-size-lgi);
+    line-height: 24px;
+  }
+}

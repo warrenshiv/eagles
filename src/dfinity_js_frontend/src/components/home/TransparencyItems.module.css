@@ -1,0 +1,44 @@
+.transparency {
+  margin: 0;
+  position: absolute;
+  top: 149px;
+  left: 24px;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+.trackEveryStep {
+  position: absolute;
+  top: 196px;
+  left: 24px;
+  font-size: var(--text-size);
+  line-height: 170%;
+  display: inline-block;
+  width: 200px;
+}
+.layersSvgrepocomIcon {
+  position: absolute;
+  top: 58px;
+  left: 24px;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+}
+.transparencyItems {
+  height: 392px;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-mini);
+  background-color: var(--color-whitesmoke-200);
+  overflow: hidden;
+  min-width: 170px;
+  text-align: left;
+  font-size: var(--headings-h4-size);
+  color: var(--color-gray-200);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 450px) {
+  .transparency {
+    font-size: var(--text-lg-semibold-size);
+  }
+}

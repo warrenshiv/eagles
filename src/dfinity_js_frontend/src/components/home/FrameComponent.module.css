@@ -1,0 +1,41 @@
+.frameChild {
+  height: 76px;
+  width: 90px;
+  position: relative;
+  object-fit: contain;
+}
+.frameWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.letsEmbodyYour {
+  align-self: stretch;
+  position: relative;
+  line-height: 22px;
+}
+.frameParent {
+  flex: 1;
+  border-radius: var(--br-xs);
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xl) var(--padding-xs);
+  box-sizing: border-box;
+  gap: var(--gap-25xl);
+  min-width: 217px;
+  text-align: center;
+  font-size: var(--text-size);
+  color: var(--black-fonts-headings);
+  font-family: var(--text);
+}
+@media screen and (max-width: 450px) {
+  .frameParent {
+    gap: var(--gap-3xl);
+  }
+}

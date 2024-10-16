@@ -1,0 +1,88 @@
+.changingMyThoughts,
+.hasAllowedMe {
+  position: absolute;
+  left: 28.8px;
+  letter-spacing: -0.63px;
+  line-height: 30.6px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  height: 30.6px;
+}
+.changingMyThoughts {
+  top: 105.3px;
+  font-size: var(--font-size-3xl-5);
+  width: 240.1px;
+}
+.hasAllowedMe {
+  top: 137.7px;
+  width: 196.3px;
+}
+.changeMyLife {
+  top: 170.1px;
+  letter-spacing: -0.63px;
+  line-height: 33px;
+  width: 161px;
+  height: 33px;
+}
+.changeMyLife,
+.davideLondon,
+.onUsingMeditation {
+  position: absolute;
+  left: 28.8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.davideLondon {
+  top: 320.4px;
+  font-size: var(--font-size-xs-7);
+  letter-spacing: -0.13px;
+  line-height: 16.2px;
+  color: var(--color-dimgray-100);
+  width: 86.5px;
+  height: 15.3px;
+}
+.onUsingMeditation {
+  top: 344.7px;
+  font-size: var(--font-size-3xs-9);
+  letter-spacing: -0.11px;
+  line-height: 12.6px;
+  width: 201.1px;
+  height: 12.6px;
+}
+.frameIcon {
+  position: absolute;
+  top: 25.2px;
+  left: calc(50% - 139.5px);
+  width: 67.5px;
+  height: 72px;
+}
+.divcssS1fwqh {
+  position: absolute;
+  top: 246.1px;
+  left: 1188px;
+  border-radius: var(--br-2xs-8);
+  background-color: var(--color-whitesmoke-300);
+  width: 336.6px;
+  height: 383.4px;
+  opacity: 0.4;
+  text-align: left;
+  font-size: var(--font-size-4xl-4);
+  color: var(--color-darkslategray-200);
+  font-family: var(--text);
+}
+@media screen and (max-width: 450px) {
+  .changingMyThoughts {
+    font-size: var(--text-lg-semibold-size);
+    line-height: 24px;
+  }
+  .changeMyLife,
+  .hasAllowedMe {
+    font-size: var(--font-size-lgi);
+    line-height: 24px;
+  }
+  .changeMyLife {
+    line-height: 26px;
+  }
+}

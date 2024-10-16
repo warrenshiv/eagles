@@ -1,0 +1,426 @@
+.frameChild {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.frameItem,
+.fundit {
+  position: absolute;
+  z-index: 2;
+}
+.frameItem {
+  top: 0.6px;
+  left: 0;
+  width: 29px;
+  height: 24.8px;
+}
+.fundit {
+  text-decoration: none;
+  top: 0;
+  left: 35px;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  min-width: 64px;
+  white-space: nowrap;
+}
+.frameContainer {
+  align-self: stretch;
+  height: 26px;
+  position: relative;
+}
+.frameWrapper {
+  width: 99px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-smi) 0 0;
+  box-sizing: border-box;
+}
+.about,
+.faqs,
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 30px;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 55px;
+  z-index: 2;
+}
+.about,
+.faqs {
+  left: 82px;
+  min-width: 56px;
+}
+.faqs {
+  left: 166px;
+  min-width: 47px;
+}
+.homeParent {
+  margin: 0;
+  align-self: stretch;
+  height: 30px;
+  position: relative;
+  text-align: left;
+  font-size: var(--text-lg-semibold-size);
+  color: var(--white);
+  font-family: var(--font-poppins);
+}
+.frameNav {
+  margin: 0;
+  width: 213px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-2xs) 0 0;
+  box-sizing: border-box;
+}
+.label {
+  position: relative;
+  letter-spacing: 0.05em;
+  line-height: 150%;
+  text-transform: uppercase;
+  display: inline-block;
+  min-width: 114px;
+}
+.button,
+.rectangleParent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.button {
+  border-radius: var(--br-8xs);
+  background-color: var(--white);
+  justify-content: flex-start;
+  padding: var(--padding-sm) var(--padding-8xl);
+  white-space: nowrap;
+  z-index: 2;
+  font-size: var(--text-size);
+  color: var(--color-gray-200);
+  font-family: var(--font-poppins);
+}
+.rectangleParent {
+  margin-left: -337px;
+  width: 1680px;
+  justify-content: center;
+  padding: var(--padding-10xl) var(--padding-xl) var(--padding-10xl)
+    var(--padding-9xl);
+  box-sizing: border-box;
+  position: sticky;
+  gap: var(--gap-269xl);
+  top: 0;
+  z-index: 99;
+  max-width: 167%;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--font-size-xl-4);
+  color: var(--slate-50);
+  font-family: var(--text-xs-medium);
+}
+.shapesChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-gray-200);
+  width: 100%;
+  height: 100%;
+}
+.shapesInner,
+.shapesItem {
+  position: absolute;
+  top: 291px;
+  left: 1683px;
+  border-radius: 50%;
+  border: 0 solid var(--color-darkslategray-500);
+  box-sizing: border-box;
+  width: 253px;
+  height: 253px;
+  z-index: 1;
+}
+.shapesInner {
+  top: 153px;
+  left: 695px;
+  width: 154px;
+  height: 154px;
+}
+.maskGroupIcon,
+.shapes {
+  position: absolute;
+  margin: 0 !important;
+}
+.shapes {
+  width: 2545px;
+  height: 100%;
+  top: 0;
+  right: -553px;
+  bottom: 0;
+}
+.maskGroupIcon {
+  height: 672px;
+  width: 577px;
+  right: -350px;
+  bottom: -454px;
+  object-fit: cover;
+  z-index: 2;
+}
+.fundraiseFor {
+  margin: 0;
+}
+.fundraiseForAContainer {
+  margin: 0;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  line-height: 69.5px;
+  font-weight: 600;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+  z-index: 3;
+}
+.maskGroupParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  max-width: 100%;
+}
+.vulputateEuScelerisque {
+  width: 389px;
+  position: relative;
+  font-size: var(--text-size);
+  line-height: 26.4px;
+  font-weight: 300;
+  display: inline-block;
+  max-width: 100%;
+  z-index: 1;
+}
+.frameParent1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-7xl);
+  max-width: 100%;
+}
+.rectangle {
+  height: 52px;
+  width: 160px;
+  position: relative;
+  border-radius: var(--br-8xs);
+  background-color: var(--white);
+  display: none;
+}
+.donateNow {
+  position: relative;
+  font-size: var(--text-size);
+  letter-spacing: 0.8px;
+  line-height: 23px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: var(--font-poppins);
+  color: var(--color-gray-200);
+  text-align: center;
+  min-width: 119px;
+  z-index: 1;
+}
+.frameDiv,
+.frameGroup,
+.rectangleGroup {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.rectangleGroup {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-sm) var(--padding-xl) var(--padding-mini)
+    var(--padding-2xl);
+  background-color: var(--white);
+  border-radius: var(--br-8xs);
+  flex-direction: row;
+  white-space: nowrap;
+  z-index: 1;
+}
+.rectangleGroup:hover {
+  background-color: var(--color-gainsboro-200);
+}
+.frameDiv,
+.frameGroup {
+  flex-direction: column;
+  max-width: 100%;
+}
+.frameDiv {
+  width: 653px;
+  gap: var(--gap-3xl);
+}
+.frameGroup {
+  align-self: stretch;
+  padding: 0 var(--padding-198xl) var(--padding-132xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-71xl);
+}
+.frameInner,
+.rectangleDiv {
+  position: relative;
+  display: none;
+}
+.frameInner {
+  width: 448px;
+  height: 193px;
+  border-radius: var(--br-3xs) 0 0 var(--br-3xs);
+  background-color: var(--color-mediumseagreen-100);
+  max-width: 100%;
+}
+.rectangleDiv {
+  width: 303px;
+  height: 9px;
+  border-radius: var(--br-81xl);
+  background-color: var(--color-mediumaquamarine-100);
+}
+.raisedAmount,
+.raisedSoFar {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.raisedSoFar {
+  margin: 0;
+  width: 236px;
+  font-size: inherit;
+  line-height: 27px;
+  font-weight: 400;
+  font-family: inherit;
+}
+.raisedAmount {
+  width: 303px;
+  font-size: var(--h1-size);
+  line-height: 40px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.rectangleContainer {
+  width: 448px;
+  border-radius: var(--br-3xs) 0 0 var(--br-3xs);
+  background-color: var(--color-mediumseagreen-100);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-29xl) var(--padding-xl) var(--padding-37xl)
+    var(--padding-27xl);
+  gap: var(--gap-3xl);
+  z-index: 1;
+}
+.frameParent,
+.frameWrapper1,
+.rectangleContainer {
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.frameWrapper1 {
+  width: 838px;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  margin-top: -43px;
+  font-size: var(--h3-size);
+  color: var(--color-gray-200);
+}
+.frameParent {
+  align-self: stretch;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-89xl);
+  text-align: left;
+  font-size: var(--font-size-45xl);
+  color: var(--white);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 1200px) {
+  .rectangleParent {
+    gap: var(--gap-125xl);
+  }
+  .frameGroup {
+    padding-left: var(--padding-89xl);
+    padding-right: var(--padding-89xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .fundraiseForAContainer {
+    font-size: var(--font-size-32xl);
+    line-height: 56px;
+  }
+  .raisedAmount {
+    font-size: var(--font-size-19xl);
+    line-height: 32px;
+  }
+  .frameParent {
+    padding-bottom: var(--padding-51xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 750px) {
+  .rectangleParent {
+    gap: var(--gap-53xl);
+  }
+  .frameGroup {
+    gap: var(--gap-26xl);
+    padding-left: var(--padding-35xl);
+    padding-right: var(--padding-35xl);
+    padding-bottom: var(--padding-79xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .frameNav {
+    display: none;
+  }
+  .rectangleParent {
+    width: 1467px;
+    gap: var(--gap-17xl);
+  }
+  .fundraiseForAContainer {
+    font-size: var(--font-size-19xl);
+    line-height: 42px;
+  }
+  .frameGroup {
+    gap: var(--gap-3xl);
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .raisedSoFar {
+    font-size: var(--font-size-lgi);
+    line-height: 21px;
+  }
+  .raisedAmount {
+    font-size: var(--font-size-10xl);
+    line-height: 24px;
+  }
+  .rectangleContainer {
+    padding-left: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .frameParent {
+    padding-bottom: var(--padding-26xl);
+    box-sizing: border-box;
+  }
+}
