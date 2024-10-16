@@ -1,168 +1,58 @@
 import { Principal } from "@dfinity/principal";
 import { transferICP } from "./ledger";
 
-// CreateDonorProfile
-export async function createDonorProfile(profile) {
-  return window.canister.farmWorkChain.createDonorProfile(profile);
+// CreateDepartment
+export async function createDepartment(department) {
+  return window.canister.farmWorkChain.createDepartment(department);
 }
 
-// getDonorProfileById
-export async function getDonorProfileById(id) {
-  return window.canister.farmWorkChain.getDonorProfileById(id);
+// getDepartmentById
+export async function getDepartmentById(id) {
+  return window.canister.farmWorkChain.getDepartmentById(id);
 }
 
-// getDonorProfileByOwner
-export async function getDonorProfileByOwner() {
-  return window.canister.farmWorkChain.getDonorProfileByOwner();
+// createDoctorProfile
+export async function createDoctorProfile(profile) {
+  return window.canister.farmWorkChain.createDoctorProfile(profile);
 }
 
-// CreateCharityProfile
-export async function createCharityProfile(profile) {
-  return window.canister.farmWorkChain.createCharityProfile(profile);
+// getDoctorProfileById
+export async function getDoctorProfileById(id) {
+  return window.canister.farmWorkChain.getDoctorProfileById(id);
 }
 
-// getCharityProfileById
-export async function getCharityProfileById(id) {
-  return window.canister.farmWorkChain.getCharityProfileById(id);
+// getDoctorProfileByOwner
+export async function getDoctorProfileByOwner() {
+  return window.canister.farmWorkChain.getDoctorProfileByOwner();
 }
 
-// getCharityProfileByOwner
-export async function getCharityProfileByOwner() {
-  return window.canister.farmWorkChain.getCharityProfileByOwner();
+// createPatientProfile
+export async function createPatientProfile(profile) {
+  return window.canister.farmWorkChain.createPatientProfile(profile);
 }
 
-// createCampaign
-export async function createCampaign(campaign) {
-  return window.canister.farmWorkChain.createCampaign(campaign);
+// getPatientProfileById
+export async function getPatientProfileById(id) {
+  return window.canister.farmWorkChain.getPatientProfileById(id);
 }
 
-// getCampaignById
-export async function getCampaignById(id) {
-  return window.canister.farmWorkChain.getCampaignById(id);
+// getPatientProfileByOwner
+export async function getPatientProfileByOwner() {
+  return window.canister.farmWorkChain.getPatientProfileByOwner();
 }
 
-// getAllCampaigns
-export async function getAllCampaigns() {
-  return window.canister.farmWorkChain.getAllCampaigns();
+// CreateConsultation
+export async function createConsultation(consultation) {
+  return window.canister.farmWorkChain.createConsultation(consultation);
 }
 
-// deleteCampaignById
-export async function deleteCampaignById(id) {
-  return window.canister.farmWorkChain.deleteCampaignById(id);
+// getConsultationById
+export async function getConsultationById(id) {
+  return window.canister.farmWorkChain.getConsultationById(id);
 }
 
-// getDonorCampaigns
-export async function getDonorCampaigns(donorId) {
-  return window.canister.farmWorkChain.getDonorCampaigns(donorId);
+// getConsultationByDoctor
+export async function getConsultationByDoctor() {
+  return window.canister.farmWorkChain.getConsultationByDoctor();
 }
 
-// acceptCampaign
-export async function acceptCampaign(donorId, campaignId) {
-  try {
-    // Pass donorId and campaignId to the canister function
-    return await window.canister.farmWorkChain.acceptCampaign(
-      donorId,
-      campaignId
-    );
-  } catch (error) {
-    console.error("Error accepting campaign:", error);
-    return { Err: { Error: error.message } };
-  }
-}
-
-// getDonorDonations
-export async function getDonorDonations(donorId) {
-  return window.canister.farmWorkChain.getDonorDonations(donorId);
-}
-
-// getAcceptedCampaigns
-export async function getAcceptedCampaigns() {
-  return window.canister.farmWorkChain.getAcceptedCampaigns();
-}
-
-// completeCampaign
-export async function completeCampaign(campaignId) {
-  try {
-    // Pass campaignId to the canister function
-    return await window.canister.farmWorkChain.completeCampaign(campaignId);
-  } catch (error) {
-    console.error("Error completing campaign:", error);
-    return { Err: { Error: error.message } };
-  }
-}
-
-// getCompletedCampaigns
-export async function getCompletedCampaigns() {
-  return window.canister.farmWorkChain.getCompletedCampaigns();
-}
-
-// getCharityDonations
-export async function getCharityDonations(charityId) {
-  return window.canister.farmWorkChain.getCharityDonations(charityId);
-}
-
-// getAllDonationReports
-export async function getAllDonationReports() {
-  return window.canister.farmWorkChain.getAllDonationReports();
-}
-
-// createDonationReport
-export async function createDonationReport(report) {
-  return window.canister.farmWorkChain.createDonationReport(report);
-}
-
-// Pay Donation
-export async function payDonation(donation) {
-  const donationCanister = window.canister.farmWorkChain;
-
-  // Hardcoded donorId
-  // const hardcodedDonorId = "f4f2f0e3-ecf2-48b5-a460-d15fc5243223";
-
-  // Step 1: Create a reservation for the donation
-  const donationReserveResp = await donationCanister.reserveDonation({
-    donorId: donation.donorId,
-    charityId: donation.charityId,
-    campaignId: donation.campaignId,
-    amount: donation.amountS,
-  });
-
-  // Check if the reserve creation was successful
-  if ("Err" in donationReserveResp) {
-    console.error(donationReserveResp.Err);
-    return; // Handle error as needed
-  }
-
-  const reserve = donationReserveResp.Ok;
-  console.log("reserve", reserve);
-  const receiverPrincipal = Principal.from(reserve.receiver);
-
-  // Step 2: Get the receiver's address
-  const receiverAddress = await donationCanister.getAddressFromPrincipal(
-    receiverPrincipal
-  );
-
-  // Step 3: Transfer ICP tokens to the receiver's address
-  const block = await transferICP(
-    receiverAddress,
-    reserve.amount,
-    reserve.memo
-  );
-
-  // Logging the transaction details
-  console.log(
-    receiverPrincipal,
-    donation.donorId, // Log hardcoded donorId
-    reserve.amount,
-    block,
-    reserve.memo
-  );
-
-  // Step 4: Complete the donation reserve
-  await donationCanister.completeReserveDonation(
-    receiverPrincipal,
-    donation.donorId, // Use hardcoded donorId
-    reserve.amount,
-    block,
-    reserve.memo
-  );
-}
