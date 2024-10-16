@@ -1,41 +1,4 @@
-# 🎯 Donor Fund Tracking and Management System
 
-## 📄 Definition
-This system is designed to streamline the process of managing donations for charitable organizations. It provides a comprehensive platform where donor and charity profiles can be created, managed, and tracked efficiently. The system enables charities to run campaigns, accept donations, and generate reports on donation activities. Donors can create profiles, track their donation history, and participate in various charity campaigns.
-
-## 🚀 Features
-
-### 👤 Donor Profile Management
-- 📝 **Create and manage** donor profiles with personal details, contact information, and donation history.
-- ✏️ **Update** existing donor profiles with new information or modify existing data.
-- 🔍 **View** donor profiles by ID or owner, and retrieve all profiles in the system.
-- 🗑️ **Delete** donor profiles when no longer needed.
-
-### 🏢 Charity Profile Management
-- 📝 **Create and manage** charity profiles with essential information such as mission statements, contact details, and donation records.
-- ✏️ **Update** existing charity profiles and track the total amount received by the charity.
-- 🔍 **Retrieve** charity profiles by ID or owner, and list all charity profiles within the system.
-- 🗑️ **Delete** charity profiles if required.
-
-### 🎁 Campaign Management
-- 📝 **Create and manage** fundraising campaigns, including setting target amounts, descriptions, and associated charities.
-- ✏️ **Update** campaign details and track contributions from donors.
-- 🔍 **View** campaign details by ID and retrieve all campaigns in the system.
-- 🗑️ **Delete** campaigns that are no longer active or necessary.
-
-### 💰 Donation Management
-- 💳 **Reserve donations** with validation to ensure that all required fields are provided and donors, charities, and campaigns exist.
-- ✅ **Complete** reserved donations by verifying payments and updating donation records.
-- 🔍 **View** all donations, as well as donations specific to a donor or charity.
-
-### 📊 Donation Report Management
-- 📝 **Create** detailed donation reports, including information on donors, charities, campaigns, and the status of donations.
-- 🔍 **Retrieve** all donation reports to provide comprehensive insights into donation activities.
-
-### 🏅 Campaign Status Tracking
-- ⏳ **Track** the status of campaigns, including pending, accepted, completed, and cancelled campaigns.
-- 🏁 **Mark campaigns as completed** when fundraising goals are achieved or the campaign period ends.
-- 🔍 **Retrieve** all accepted or completed campaigns for monitoring and analysis.
 
 
 

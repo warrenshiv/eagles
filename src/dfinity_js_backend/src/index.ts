@@ -38,6 +38,7 @@ const Department = Record({
 
 const Doctor = Record({
   id: text,
+  owner: Principal,
   name: text,
   department_id: text,
   image: text,
@@ -45,6 +46,7 @@ const Doctor = Record({
 
 const Patient = Record({
   id: text,
+  owner: Principal,
   name: text,
   age: nat64,
 });
@@ -162,6 +164,7 @@ export default Canister({
       const doctor = {
         id: doctorId,
         ...payload,
+        owner: ic.caller(),
       };
 
       Doctors.insert(doctorId, doctor);
@@ -184,6 +187,7 @@ export default Canister({
       const patient = {
         ...payload,
         id: patientId,
+        owner: ic.caller(),
       };
 
       Patients.insert(patientId, patient);
